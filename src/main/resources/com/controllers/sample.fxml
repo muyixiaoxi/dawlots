@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.AppController">
+   <children>
+      <Pane layoutX="16.0" layoutY="47.0" prefHeight="326.0" prefWidth="569.0">
+         <children>
+            <Pane layoutX="29.0" layoutY="14.0" prefHeight="33.0" prefWidth="511.0">
+               <children>
+                   <Label alignment="CENTER" layoutX="411.0" layoutY="18.0" prefHeight="51.0" prefWidth="952.0" text="初中招生电脑派位系统" textFill="#f20000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                       <font>
+                           <Font name="Calibri" size="28.0" />
+                       </font>
+                   </Label>
+                  <Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false" text="上传" />
+                  <TextField layoutX="74.0" layoutY="5.0" promptText="上传文件" />
+                  <Label layoutX="256.0" layoutY="9.0" text="抽取人数" />
+                  <TextField layoutX="309.0" layoutY="3.0" prefHeight="23.0" prefWidth="64.0" />
+                  <Button layoutX="387.0" layoutY="3.0" mnemonicParsing="false" text="抽取" />
+               </children>
+            </Pane>
+            <TableView layoutX="29.0" layoutY="63.0" prefHeight="200.0" prefWidth="511.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="序号" />
+                <TableColumn prefWidth="75.0" text="学生姓名" />
+                  <TableColumn prefWidth="75.0" text="性别" />
+                  <TableColumn prefWidth="75.0" text="身份证号" />
+                  <TableColumn prefWidth="75.0" text="联系电话" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Accordion layoutX="45.0" layoutY="7.0" prefHeight="52.0" prefWidth="511.0">
+         <panes>
+          <TitledPane animated="false" prefHeight="52.0" prefWidth="176.0" text="设置" textOverrun="WORD_ELLIPSIS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="23.0" prefWidth="57.0" text="抽取设置" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+         </panes></Accordion>
+   </children>
+</AnchorPane>

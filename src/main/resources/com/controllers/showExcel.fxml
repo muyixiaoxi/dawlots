@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ShowExcel">
+   <children>
+      <ComboBox fx:id="comboBox" layoutX="43.0" layoutY="31.0" prefWidth="150.0" promptText="选择学校" />
+      <Button fx:id="button" layoutX="217.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleOpenFile" text="打开文件" />
+      <Button fx:id="exit" onAction="#exit" layoutX="318.0" layoutY="31.0" mnemonicParsing="false" text="退出" textFill="#ee0e0e" />
+   </children>
+</AnchorPane>

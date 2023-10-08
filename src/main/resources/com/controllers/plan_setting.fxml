@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="672.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.PlanSettingController">
+    <children>
+        <SplitPane dividerPositions="0.08059701492537313" layoutX="87.0" layoutY="52.0" orientation="VERTICAL" prefHeight="672.0" prefWidth="954.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="411.0" layoutY="18.0" prefHeight="51.0" prefWidth="952.0" text="初中招生电脑派位系统" textFill="#f20000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Calibri" size="28.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <AnchorPane layoutX="486.0" layoutY="166.0" minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="158.0" />
+                        <SplitPane dividerPositions="0.08901515151515152" layoutX="110.0" layoutY="32.0" orientation="VERTICAL" prefHeight="530.0" prefWidth="732.0">
+                            <items>
+                                <AnchorPane fx:id="p1" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="350.0" layoutY="15.0" prefHeight="44.0" prefWidth="730.0" text="学校招生计划" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <TableView fx:id="pTable" layoutY="2.0" prefHeight="353.0" prefWidth="730.0">
+                                            <columns>
+                                                <TableColumn fx:id="tcSchoolName" prefWidth="171.0" text="学校名称" />
+                                                <TableColumn fx:id="tcPlan" prefWidth="174.0" text="招生计划" />
+                                                <TableColumn fx:id="tcStuSum" prefWidth="204.0" text="导入学生总数量" />
+                                                <TableColumn fx:id="actionColumn" prefWidth="125.0" text="摇号" />
+                                            </columns>
+                                        </TableView>
+                                        <Pane layoutY="365.0" prefHeight="103.0" prefWidth="730.0">
+                                            <children>
+                                                <TextField fx:id="tSchoolName" layoutX="114.0" layoutY="14.0" prefHeight="23.0" prefWidth="80.0" promptText="填写学校" />
+                                                <TextField fx:id="tPlan" layoutX="276.0" layoutY="15.0" prefHeight="23.0" prefWidth="102.0" />
+                                                <Label alignment="CENTER" layoutX="36.0" layoutY="11.0" prefHeight="30.0" prefWidth="75.0" text="学校名称" textAlignment="CENTER" />
+                                                <Label alignment="CENTER" layoutX="216.0" layoutY="16.0" prefHeight="20.0" prefWidth="60.0" text="招生计划" />
+                                                <GridPane layoutX="73.0" layoutY="52.0" prefHeight="30.0" prefWidth="540.0">
+                                                    <children>
+                                                        <Button fx:id="addPlan" alignment="CENTER" contentDisplay="TOP" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#addPlanEvent" prefWidth="80.0" text="添加" />
+                                                        <Button fx:id="upPlan" maxWidth="80.0" mnemonicParsing="false" onAction="#upPlanEvent" text="修改" GridPane.columnIndex="1" />
+                                                        <Button fx:id="dePlan" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#dePlanEvent" prefWidth="80.0" text="删除" GridPane.columnIndex="2" />
+                                                        <Button fx:id="clPlan" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#clPlanEvent" prefWidth="80.0" text="清除" textFill="#860000" GridPane.columnIndex="3" />
+                                                        <Button fx:id="exPlan" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#exPlanEvent" prefWidth="80.0" text="退出" GridPane.columnIndex="4" />
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                </GridPane>
+                                    <Button fx:id="imPlan" layoutX="410.0" layoutY="14.0" mnemonicParsing="false" onAction="#selectExcel" prefHeight="20.0" prefWidth="88.0" text="导入名单" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
